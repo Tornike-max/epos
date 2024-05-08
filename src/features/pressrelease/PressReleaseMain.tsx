@@ -3,9 +3,11 @@ import { PressReleaseDataType } from "../../types/types";
 import { Button, Divider } from "@nextui-org/react";
 import { useRef } from "react";
 import { useToggleDarkMode } from "../../context/useToggleDarkMode";
+import { useNavigate } from "react-router-dom";
 
 const PressReleaseMain = ({ data }: { data: PressReleaseDataType }) => {
   const { selected } = useToggleDarkMode();
+  const navigate = useNavigate();
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -61,11 +63,14 @@ const PressReleaseMain = ({ data }: { data: PressReleaseDataType }) => {
         </p>
       </div>
       <div className="w-full flex justify-start items-center">
-        <Button className={`bg-blue-500 text-slate-100 hover:text-white`}>
+        <Button
+          onClick={() => navigate(`/press-release/releaseid/${data.id}`)}
+          className={`bg-blue-500 text-slate-100 hover:text-white`}
+        >
           See Full
         </Button>
       </div>
-      <Divider />
+      <Divider className={`${selected === "dark" && "bg-slate-800"}`} />
     </motion.div>
   );
 };

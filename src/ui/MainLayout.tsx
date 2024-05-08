@@ -11,7 +11,7 @@ const MainLayout = () => {
 
   return (
     <div className="flex absolute w-full flex-col">
-      <div className="flex w-full  ">
+      <div className="flex w-full">
         <header className="sm:hidden ">
           <NavbarMenuMobile />
         </header>

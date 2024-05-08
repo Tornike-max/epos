@@ -208,18 +208,22 @@ export const pressReleaseCards = [
 
 export const pressReleaseData = [
   {
+    id: 1,
     date: "02.03.2023",
     info: `Epos Software Ltd. (Headquarters: Europe; President & CEO: Michael Bulkaty) and Epos Software Ltd. (Headquarters: Hongkong, China; President: Ozbelashvili Temur) announced that the developed collectable card game "Babylon: Adventure".`,
   },
   {
+    id: 2,
     date: "22.05.2024",
     info: `Epos Software Ltd. (Headquarters: Europe; President & CEO: Michael Bulkaty) and Epos Software Ltd. (Headquarters: Hongkong, China; President: Ozbelashvili Temur) announced that the developed collectable card game "Babylon: Adventure".`,
   },
   {
+    id: 3,
     date: "14.01.2023",
     info: `Epos Software Ltd. (Headquarters: Europe; President & CEO: Michael Bulkaty) and Epos Software Ltd. (Headquarters: Hongkong, China; President: Ozbelashvili Temur) announced that the developed collectable card game "Babylon: Adventure".`,
   },
   {
+    id: 4,
     date: "26.08.2024",
     info: `Epos Software Ltd. (Headquarters: Europe; President & CEO: Michael Bulkaty) and Epos Software Ltd. (Headquarters: Hongkong, China; President: Ozbelashvili Temur) announced that the developed collectable card game "Babylon: Adventure".`,
   },

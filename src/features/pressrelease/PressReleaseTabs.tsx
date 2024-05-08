@@ -7,7 +7,6 @@ const PressReleaseTabs = () => {
 
   const handleSetYear = (e: React.MouseEvent, year: string) => {
     e.preventDefault();
-    console.log(year);
     searchParams.set("filterByYear", year);
     setSearchParams(searchParams);
   };

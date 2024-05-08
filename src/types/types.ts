@@ -22,6 +22,7 @@ export type PressReleaseType = {
 };
 
 export type PressReleaseDataType = {
+  id: number;
   date: string;
   info: string;
 };

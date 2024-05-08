@@ -21,7 +21,13 @@ const CareersSearchForm = () => {
           : "bg-slate-100 border-primary-300 hover:border-primary-500"
       } duration-150 transition-all border-2 rounded-lg overflow-hidden shadow-lg p-6`}
     >
-      <h2 className="text-xl font-semibold mb-4">Job Search</h2>
+      <h2
+        className={`text-xl font-semibold mb-4 ${
+          selected === "dark" ? "text-gray-100" : "text-gray-900"
+        }`}
+      >
+        Job Search
+      </h2>
       <form className="grid grid-cols-3 gap-4">
         <motion.div
           className="mb-4"
