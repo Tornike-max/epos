@@ -5,6 +5,7 @@ import PressReleaseMain from "./PressReleaseMain";
 import { pressReleaseData } from "../../constants/constant";
 import { PressReleaseDataType } from "../../types/types";
 import { useSearchParams } from "react-router-dom";
+import React from "react";
 
 const PressReleaseInfo = () => {
   const [searchParams] = useSearchParams();
@@ -40,7 +41,9 @@ const PressReleaseInfo = () => {
       <Divider />
       {filteredData && filteredData.length > 0 ? (
         filteredData?.map((dat: PressReleaseDataType) => (
-          <PressReleaseMain key={dat.date} data={dat} />
+          <React.Fragment key={dat.date}>
+            <PressReleaseMain data={dat} />
+          </React.Fragment>
         ))
       ) : (
         <div className="max-w-[700px] w-full flex justify-end items-center">

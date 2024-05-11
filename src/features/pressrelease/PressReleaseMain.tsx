@@ -44,6 +44,8 @@ const PressReleaseMain = ({ data }: { data: PressReleaseDataType }) => {
       }}
       className="w-full flex justify-center items-start flex-col gap-6"
     >
+      <Divider className={`${selected === "dark" && "bg-slate-800"}`} />
+
       <div className={divClass}>
         <h4 className={h4Class}>{data.date}</h4>
         <p className={pClass}>{data.info}</p>
