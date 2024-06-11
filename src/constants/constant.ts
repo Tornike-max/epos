@@ -103,7 +103,7 @@ export const tabs = ["All", "Mobile Apps", "Platform", "Soundtrack"];
 export const data = [
   {
     image: "/images/babylon.png",
-    video: "/video/me.mp4",
+    video: "",
     genre: "Arcade",
     title: "Babylon",
     release: "2024",
@@ -114,7 +114,7 @@ export const data = [
   },
   {
     image: "/images/babylon.png",
-    video: "/video/me.mp4",
+    video: "",
     genre: "Arcade",
     title: "The Bureau: city of Angels",
     release: "2024",
