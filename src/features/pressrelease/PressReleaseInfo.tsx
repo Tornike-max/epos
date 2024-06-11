@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import PressReleaseTabs from "./PressReleaseTabs";
+// import PressReleaseTabs from "./PressReleaseTabs";
 import { Divider } from "@nextui-org/react";
 import PressReleaseMain from "./PressReleaseMain";
 import { pressReleaseData } from "../../constants/constant";
@@ -37,7 +37,7 @@ const PressReleaseInfo = () => {
       }}
       className="w-full flex items-center justify-center flex-col gap-4"
     >
-      <PressReleaseTabs />
+      {/* <PressReleaseTabs /> */}
       <Divider />
       {filteredData && filteredData.length > 0 ? (
         filteredData?.map((dat: PressReleaseDataType) => (

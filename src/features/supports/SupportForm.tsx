@@ -31,10 +31,10 @@ const SupportForm = () => {
   };
 
   return (
-    <div className="w-full flex justify-center items-center">
+    <div className="w-full h-full flex justify-center items-center">
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="max-w-7xl w-full flex justify-center items-center flex-col gap-2  py-4 px-4"
+        className="max-w-3xl w-full flex justify-center items-center flex-col gap-2 py-4 px-4"
       >
         <Input
           type="email"
@@ -44,7 +44,7 @@ const SupportForm = () => {
           color={errors.email?.message ? "danger" : "default"}
           errorMessage={errors.email?.message && errors.email?.message}
           {...register("email")}
-          className="text-slate-100"
+          className="w-full text-slate-100"
         />
         <Textarea
           label="Message"

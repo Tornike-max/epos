@@ -43,7 +43,7 @@ const PressReleaseDetails = () => {
       >
         Go Back
       </Button>
-      <Divider className={`${selected === "dark" && "bg-slate-800"}`} />
+      <Divider className={`${selected === "dark" && "bg-slate-600"}`} />
       {releaseData && <PressReleaseDetailsMain data={releaseData} />}
     </motion.div>
   );

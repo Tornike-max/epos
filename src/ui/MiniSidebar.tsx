@@ -18,7 +18,7 @@ const MiniSidebar = ({ children }: { children: React.ReactNode }) => {
     <nav
       className={`h-full relative flex flex-col border-l ${
         selected === "light" ? "bg-slate-50" : "bg-slate-900 border-slate-950"
-      } duration-150 transition-all  shadow-sm`}
+      } duration-150 transition-all  shadow-sm pt-6`}
     >
       <div className="md:p-4 pb-8 flex justify-between items-center flex-col gap-2 ">
         <button
@@ -29,18 +29,20 @@ const MiniSidebar = ({ children }: { children: React.ReactNode }) => {
         </button>
 
         <img
-          src="/images/lg.png"
+          src={`${
+            selected === "dark" ? "/images/epos.png" : "/images/dark-epos.png"
+          }`}
           alt="logo"
           className={`overflow-hidden transition-all ${
-            expanded ? "w-24" : "hidden"
+            expanded ? "w-40" : "hidden"
           } `}
         />
       </div>
       <ul className="w-full px-3 space-y-6">{children}</ul>
-      <div className="border-t flex justify-end items-center p-3">
+      <div className="border-t flex justify-end items-center p-3 mt-2">
         <div
           className={` flex justify-center items-center overflow-hidden transition-all ${
-            expanded ? "w-52 mr-3" : "hidden"
+            expanded ? "w-56 mr-3" : "hidden"
           }`}
         >
           <div className="w-full flex flex-col justify-center items-center">
@@ -52,7 +54,7 @@ const MiniSidebar = ({ children }: { children: React.ReactNode }) => {
                 selected === "light" ? "text-gray-600" : "text-slate-100"
               } `}
             >
-              Limited © 2023 All rights reserved.
+              © 2024 Epos Software. All rights reserved.
             </span>
           </div>
         </div>

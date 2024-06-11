@@ -3,11 +3,12 @@ import ProductsPage from "./pages/ProductsPage";
 import PressReleasePage from "./pages/PressReleasePage";
 import SupportPage from "./pages/SupportPage";
 import CompanyPage from "./pages/CompanyPage";
-import CareersPage from "./pages/CareersPage";
+// import CareersPage from "./pages/CareersPage";
 import AppLayout from "./ui/AppLayout";
-import HomePage from "./pages/HomePage";
 import ProductDescriptionPage from "./pages/ProductDescriptionPage";
 import PressReleaseDetails from "./features/pressrelease/PressReleaseDetails";
+import { HomePage } from "./pages/HomePage";
+// import CareersApplyPage from "./pages/CareersApplyPage";
 
 function App() {
   return (
@@ -27,7 +28,12 @@ function App() {
               path="/press-release/releaseid/:releaseId"
               element={<PressReleaseDetails />}
             />
-            <Route path="/careers" element={<CareersPage />} />
+            {/* <Route path="/careers" element={<CareersPage />} />
+            <Route
+              path="/careers/apply/:applyId"
+              element={<CareersApplyPage />}
+            /> */}
+
             <Route path="/support" element={<SupportPage />} />
           </Route>
         </Routes>

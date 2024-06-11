@@ -18,7 +18,7 @@ const ProductsMainContent = ({ product }: { product: ProductType }) => {
         <div className="relative overflow-hidden group">
           <Image
             isBlurred
-            width={700}
+            width={900}
             onClick={() => handleNavigateToDescription(product.id)}
             height={500}
             alt={product.title}
@@ -26,13 +26,7 @@ const ProductsMainContent = ({ product }: { product: ProductType }) => {
             src={`${product.image}`}
             className="w-full h-full bg-cover cursor-pointer group-hover:z-50 transition-transform duration-500 transform scale-100 hover:scale-110"
           />
-          {/* <Image
-            onClick={() => handleNavigateToDescription(product.id)}
-            width={850}
-            src={product.image}
-            alt={product.title}
-            className="w-full h-full bg-cover cursor-pointer group-hover:z-50 transition-transform duration-500 transform scale-100 hover:scale-110"
-          /> */}
+
           <div className="absolute rounded-xl inset-0 bg-black bg-opacity-40 transition-opacity duration-500 z-10 opacity-100 hover:opacity-0" />
         </div>
       </div>

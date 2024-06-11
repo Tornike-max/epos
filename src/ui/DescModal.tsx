@@ -10,6 +10,7 @@ import { useSearchParams } from "react-router-dom";
 import { jobs } from "../constants/constant";
 import { TbBriefcase2 } from "react-icons/tb";
 import { formatCurrency } from "./formatCurrency";
+import { useToggleDarkMode } from "../context/useToggleDarkMode";
 
 const DescModal = ({
   isOpen,
@@ -22,8 +23,7 @@ const DescModal = ({
 }) => {
   const [searchParams, setSearchParams] = useSearchParams();
   const getParams = searchParams.get("jobId") ?? "";
-  console.log(getParams);
-
+  const { selected } = useToggleDarkMode();
   const handleCloseModal = () => {
     searchParams.delete("jobId");
     setSearchParams(searchParams);
@@ -37,7 +37,8 @@ const DescModal = ({
 
   return (
     <Modal
-      backdrop="opaque"
+      backdrop="blur"
+      size="2xl"
       isOpen={isOpen}
       onOpenChange={handleCloseModal}
       motionProps={{
@@ -51,23 +52,36 @@ const DescModal = ({
             },
           },
           exit: {
-            y: -20,
+            y: 50,
             opacity: 0,
             transition: {
-              duration: 0.2,
+              duration: 0.3,
               ease: "easeIn",
             },
           },
         },
       }}
+      className={`${selected === "dark" && "bg-slate-950"}`}
     >
       <ModalContent onClick={handleCloseModal}>
         <>
           <ModalHeader className="flex items-center gap-3 ">
-            <h1 className="text-slate-900 font-bold">{data.title}</h1>
-            <TbBriefcase2 className="p-1 rounded-full text-4xl bg-slate-200 border-1 border-slate-300" />
+            <h1
+              className={`${
+                selected === "dark" ? "text-slate-100" : "text-slate-900"
+              } font-bold`}
+            >
+              {data.title}
+            </h1>
+            <TbBriefcase2
+              className={`p-1 rounded-full text-4xl bg-slate-200 border-1 border-slate-300`}
+            />
           </ModalHeader>
-          <ModalBody>
+          <ModalBody
+            className={`${
+              selected === "dark" ? "text-slate-200" : "text-slate-900"
+            }`}
+          >
             <p>
               <span>Location: </span>
               <span>{data.location}</span>

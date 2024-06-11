@@ -7,11 +7,6 @@ export const pageList = [
     icon: HiOutlineHome,
   },
   {
-    label: "Company",
-    path: "/company",
-    icon: "",
-  },
-  {
     label: "Products",
     path: "/products",
     icon: "",
@@ -22,8 +17,8 @@ export const pageList = [
     icon: "",
   },
   {
-    label: "Careers",
-    path: "/careers",
+    label: "Company",
+    path: "/company",
     icon: "",
   },
   {
@@ -31,6 +26,11 @@ export const pageList = [
     path: "/support",
     icon: "",
   },
+  // {
+  //   label: "Careers",
+  //   path: "/careers",
+  //   icon: "",
+  // },
 ];
 
 export const squareData = [
@@ -122,28 +122,6 @@ export const data = [
     description:
       "A game about a paranormal investigation bureau. You will immerse yourself in the life of a World War II veteran and investigate the unsolved mysteries of this world...",
     id: 2,
-  },
-  {
-    image: "/images/babylon.png",
-    video: "/video/me.mp4",
-    genre: "Arcade",
-    title: "Babylon",
-    release: "2024",
-    for: "Android & IOS",
-    description:
-      'In "Babylon: Adventure" the story of old lands is illustrated in a new setting, the Land of Forgotten Sands. Players will enjoy an adventure with a high degree of freedom, in various situations full of mysteries and danger with newly added numerous weapons and armor.',
-    id: 3,
-  },
-  {
-    image: "/images/babylon.png",
-    video: "/video/me.mp4",
-    genre: "Arcade",
-    title: "Babylon",
-    release: "2024",
-    for: "Android & IOS",
-    description:
-      "A game about a paranormal investigation bureau. You will immerse yourself in the life of a World War II veteran and investigate the unsolved mysteries of this world...",
-    id: 4,
   },
 ];
 

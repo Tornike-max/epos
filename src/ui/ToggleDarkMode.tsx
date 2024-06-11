@@ -11,7 +11,7 @@ const ToggleDarkMode = () => {
     <div
       className={`grid ${
         selected === "light" ? "bg-slate-50" : "bg-slate-900"
-      }  rounded-full place-content-center px-4 transition-colors`}
+      }  rounded-full place-content-center md:px-2 transition-colors`}
     >
       <div className="relative flex w-fit items-center duration-150 transition-all rounded-full">
         <button
@@ -22,7 +22,7 @@ const ToggleDarkMode = () => {
             setSelected("light");
           }}
         >
-          <FiSun className="relative z-10 text-lg md:text-sm" />
+          <FiSun className="relative z-10 text-xs md:text-lg" />
           <span className="relative z-10">Light</span>
         </button>
         <button
@@ -33,7 +33,7 @@ const ToggleDarkMode = () => {
             setSelected("dark");
           }}
         >
-          <FiMoon className="relative z-10 text-lg md:text-sm" />
+          <FiMoon className="relative z-10 text-xs md:text-lg" />
 
           <span className="relative z-10">Dark</span>
         </button>

@@ -1,6 +1,6 @@
-import { FaFacebook, FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { HiOutlineArrowRight } from "react-icons/hi2";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useToggleDarkMode } from "../context/useToggleDarkMode";
 
 const Footer = () => {
@@ -8,8 +8,9 @@ const Footer = () => {
   const { selected } = useToggleDarkMode();
   return (
     <div className=" w-full flex flex-col justify-center items-center">
-      <div className="w-full text-black flex justify-center items-center py-4 gap-4 text-2xl">
-        <span
+      <div className="w-full text-black flex justify-center items-center py-1 sm:py-4 gap-4 text-2xl">
+        <Link
+          to="https://www.instagram.com/epossoftware/"
           className={`cursor-pointer  p-1 rounded-md  ${
             selected === "light"
               ? "bg-[#EFEFFA] hover:bg-[#DFE0FC] text-slate-900 "
@@ -17,17 +18,18 @@ const Footer = () => {
           }  duration-150 transition-colors hover:text-[#405DE6]`}
         >
           <FaInstagram />
-        </span>
+        </Link>
         <span
           className={`cursor-pointer  p-1 rounded-md ${
             selected === "light"
-              ? "bg-[#EFEFFA] hover:bg-[#DFE0FC] text-slate-900 "
-              : "bg-slate-950 hover:bg-slate-900 text-slate-100 "
+              ? "bg-[#EFEFFA] hover:bg-[#DFE0FC] text-slate-900"
+              : "bg-slate-950 hover:bg-slate-900 text-slate-100"
           } duration-150 transition-colors hover:text-[#1877F2]`}
         >
           <FaFacebook />
         </span>
-        <span
+        <Link
+          to="https://www.linkedin.com/company/epos-software-limited/"
           className={`cursor-pointer  p-1 rounded-md ${
             selected === "light"
               ? "bg-[#EFEFFA] hover:bg-[#DFE0FC] text-slate-900 "
@@ -35,19 +37,10 @@ const Footer = () => {
           } duration-150 transition-colors hover:text-[#2867B2]`}
         >
           <FaLinkedin />
-        </span>
-        <span
-          className={`cursor-pointer  p-1 rounded-md ${
-            selected === "light"
-              ? "bg-[#EFEFFA] hover:bg-[#DFE0FC] text-slate-900 "
-              : "bg-slate-950 hover:bg-slate-900 text-slate-100 "
-          } duration-150 transition-colors hover:text-[#FF0000]`}
-        >
-          <FaYoutube />
-        </span>
+        </Link>
       </div>
       <div className="w-full flex justify-center items-center">
-        <div className="w-full flex items-center justify-center gap-1 sm:gap-2 ">
+        <div className="w-full hidden sm:flex items-center justify-center gap-1 sm:gap-2 ">
           <button
             onClick={() => navigate("/company?info=access")}
             className="relative cursor-pointer group"
@@ -115,7 +108,7 @@ const Footer = () => {
               selected === "light" ? "text-slate-600" : "text-slate-100"
             }`}
           >
-            © 2023-2024 EposSoftware, Inc. All rights reserved.
+            © 2024 EposSoftware, Inc. All rights reserved.
           </span>
         </div>
       </div>

@@ -31,16 +31,7 @@ const CompanyAccessInfo = ({ selected }: { selected: string }) => {
         Access
       </h1>
 
-      <div
-        className={`w-full flex flex-col items-center justify-center ${
-          selected === "dark" && "text-slate-100"
-        } duration-150 transition-all`}
-      >
-        <h3 className="w-full text-start text-xl font-bold">
-          Tbilisi Head Office
-        </h3>
-        <Divider />
-      </div>
+      <Divider className={`${selected === "dark" ? "bg-slate-600" : ""}`} />
 
       <div className="max-w-[1300px] w-full flex justify-center items-center flex-col py-8 gap-8">
         <div className="w-full grid grid-cols-1 md:grid-cols-2">
@@ -58,13 +49,13 @@ const CompanyAccessInfo = ({ selected }: { selected: string }) => {
             className={`border-0 max-w-[1000px] w-full min-h-96 rounded-xl ${
               !loadingIframe ? "visible" : "hidden"
             }`}
-            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d9115.995468980085!2d44.753179002564!3d41.74960752362416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDHCsDQ0JzU4LjYiTiA0NMKwNDYnMTcuOSJF!5e1!3m2!1ska!2sge!4v1713783153266!5m2!1ska!2sge"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3689.019036614436!2d114.20480327529513!3d22.39063977962175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x340406471228bbc7%3A0x2611f10f25c8eb38!2sI.T.%20OUTSOURCING!5e0!3m2!1ska!2sge!4v1718089570127!5m2!1ska!2sge"
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
             onLoad={() => setLoadingIframe(false)}
           ></iframe>
         </div>
-        <Divider />
+        <Divider className={`${selected === "dark" ? "bg-slate-600" : ""}`} />
 
         <div className="w-full grid grid-cols-1 md:grid-cols-2">
           <p
@@ -79,26 +70,8 @@ const CompanyAccessInfo = ({ selected }: { selected: string }) => {
               selected === "dark" ? "text-slate-100" : "text-slate-700"
             }  text-base`}
           >
-            Shinjuku Front Tower. 21-1,Kita-Shinjuku 2-chome,Shinjuku-ku,Tokyo
-            169-0074 Japan
-          </p>
-        </div>
-        <Divider />
-
-        <div className="w-full grid grid-cols-1 md:grid-cols-2">
-          <p
-            className={`w-full font-semibold ${
-              selected === "dark" ? "text-slate-100" : "text-slate-700"
-            }  text-sm sm:text-base md:text-lg`}
-          >
-            Nearest Station
-          </p>
-          <p
-            className={`w-full font-semibold ${
-              selected === "dark" ? "text-slate-100" : "text-slate-700"
-            }  text-base`}
-          >
-            10 minutes walk from Didube metro station
+            604, Tower A, New Trade Plaza, 6 On Ping Street, Shatin, N.T., Hong
+            Kong
           </p>
         </div>
       </div>

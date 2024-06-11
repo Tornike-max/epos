@@ -1,13 +1,13 @@
 import { Button } from "@nextui-org/button";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import { HiOutlineCurrencyDollar } from "react-icons/hi2";
 import { TbBriefcase2 } from "react-icons/tb";
 import { formatCurrency } from "../../ui/formatCurrency";
 import { useToggleDarkMode } from "../../context/useToggleDarkMode";
 import { useDisclosure } from "@nextui-org/react";
 import DescModal from "../../ui/DescModal";
-import { useSearchParams } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 
 const CareersJobsList = ({
   job,
@@ -22,6 +22,7 @@ const CareersJobsList = ({
   };
 }) => {
   const { selected } = useToggleDarkMode();
+  const navigate = useNavigate();
   const [searchParams, setSearchParams] = useSearchParams();
   const { isOpen, onOpenChange, onOpen, onClose } = useDisclosure();
   const ref = useRef<HTMLDivElement>(null);
@@ -48,6 +49,11 @@ const CareersJobsList = ({
     onOpen();
   };
 
+  const handleNavigateToApply = (id: number) => {
+    if (!id) throw new Error("No Id Provided");
+    navigate(`/careers/apply/${id}`);
+  };
+
   return (
     <>
       <motion.div
@@ -70,7 +76,7 @@ const CareersJobsList = ({
           selected === "dark"
             ? "bg-slate-900 border-primary-600 hover:border-primary-700"
             : "bg-slate-100 border-slate-300 hover:border-primary-500"
-        }  items-center border-2   rounded-xl hover:shadow-2xl cursor-pointer duration:150 transition-all`}
+        }  items-center border-2 rounded-xl hover:shadow-2xl cursor-pointer duration:150 transition-all`}
       >
         <motion.div className="w-full  rounded-lg p-6 m-4 ">
           <div className=" font-semibold mb-2 flex items-center justify-between">
@@ -119,7 +125,11 @@ const CareersJobsList = ({
             >
               See Job Description
             </Button>
-            <Button variant="shadow" color="primary">
+            <Button
+              onClick={() => handleNavigateToApply(job.id)}
+              variant="shadow"
+              color="primary"
+            >
               Apply Now
             </Button>
           </div>

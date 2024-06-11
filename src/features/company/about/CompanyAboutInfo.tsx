@@ -34,7 +34,7 @@ const CompanyAboutInfo = ({ selected }: { selected: string }) => {
       >
         About Company
       </h1>
-      <Divider />
+      <Divider className={`${selected === "dark" && "bg-slate-600"}`} />
 
       <section className="w-full flex flex-col items-start justify-center gap-4 py-4">
         <div className="max-w-[550px] w-full grid grid-cols-2 gap-10">
@@ -43,11 +43,15 @@ const CompanyAboutInfo = ({ selected }: { selected: string }) => {
         </div>
         <div className=" max-w-[550px] w-full grid grid-cols-2 gap-10">
           <p className={companyStyle1}>Date of Foundation:</p>
-          <p className={companyStyle2}>November 1, 1986</p>
+          <p className={companyStyle2}>01.03.2024</p>
         </div>
         <div className=" max-w-[550px] w-full grid grid-cols-2 gap-10">
           <p className={companyStyle1}>Address:</p>
-          <p className={companyStyle2}>Tbilisi, Georgia</p>
+          <p className={companyStyle2}>Hong Kong</p>
+        </div>
+        <div className="max-w-[550px] w-full grid grid-cols-2 gap-10">
+          <p className={companyStyle1}>DUNS Number:</p>
+          <p className={companyStyle2}>989199894</p>
         </div>
         <div className=" max-w-[550px] w-full grid grid-cols-2 gap-10">
           <p className={companyStyle1}>Description of Business:</p>
